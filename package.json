@@ -1,0 +1,26 @@
+{
+  "type": "module",
+  "name": "federation_example",
+  "version": "1.0.0",
+  "description": "federation test",
+  "main": "index.js",
+  "scripts": {
+    "start-gateway": "nodemon ./service/index.js",
+    "start-service-user": "nodemon ./service/user.js",
+    "start-service-product": "nodemon ./service/product.js",
+    "start-service-cart": "nodemon ./service/cart.js",
+    "start-services": "concurrently \"npm:start-service-*\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/federation": "^0.38.1",
+    "@apollo/gateway": "^2.4.1",
+    "@apollo/server": "^4.6.0",
+    "graphql-tag": "^2.12.6"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1",
+    "nodemon": "^2.0.22"
+  }
+}
